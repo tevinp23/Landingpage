@@ -113,5 +113,32 @@
 				});
 
 			});
-
-})(jQuery);
+			// Add Formspree form submission handling
+			$(document).ready(function() {
+				const form = $('#contact-form');
+				
+				form.on('submit', function(e) {
+					e.preventDefault();
+					
+					const formData = new FormData(form[0]);
+					
+					$.ajax({
+						url: form.attr('action'),
+						method: 'POST',
+						data: formData,
+						processData: false,
+						contentType: false,
+						dataType: 'json'
+					})
+					.done(function(response) {
+						alert('Thank you for your message! We\'ll get back to you soon.');
+						form[0].reset();
+					})
+					.fail(function(error) {
+						console.error('Error:', error);
+						alert('There was an error sending your message. Please try again later.');
+					});
+				});
+			});
+		
+		})(jQuery);

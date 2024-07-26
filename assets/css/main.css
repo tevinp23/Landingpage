@@ -2632,7 +2632,7 @@ input, select, textarea {
 		}
 
 		#header h1 {
-			color: rgba(255, 255, 255, 0.5);
+			color: rgba(18, 106, 12, 0.734);
 			font-size: 1.35em;
 			line-height: 1.75em;
 			margin: 0;
@@ -2640,13 +2640,13 @@ input, select, textarea {
 
 		#header .image.avatar {
 			margin: 0 0 1em 0;
-			width: 6.25em;
+			width: 15em;
 		}
 
 /* Footer */
 
 	#footer .icons {
-		margin: 1em 0 0 0;
+		margin: em 0 0 0;
 	}
 
 		#footer .icons a {
