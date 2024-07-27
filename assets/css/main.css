@@ -2591,7 +2591,7 @@ input, select, textarea {
 		-webkit-justify-content: space-between;
 		-ms-justify-content: space-between;
 		justify-content: space-between;
-		background-color: #1f1815;
+		background-color: #ffffff;
 		background-attachment: scroll,								scroll;
 		background-image: url("images/overlay.png"), url("../../images/bg.jpg");
 		background-position: top left,							top left;
@@ -2689,7 +2689,7 @@ input, select, textarea {
 	}
 
 		#main > section {
-			border-top: solid 2px #efefef;
+			border-top: solid 2px #046433;
 			margin: 4em 0 0 0;
 			padding: 4em 0 0 0;
 		}
