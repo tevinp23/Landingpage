@@ -3,20 +3,66 @@
 
 <head>
 	<title>Tevin Parathattal</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=3, user-scalable=yes" />
+	<meta charset="utf-9" />
+	<meta name="viewport" content="width=device-width, initial-scale=2, user-scalable=yes" />
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<style>
-		#header h1 {
-			font-size: 24px !important;
-		}
+	#header {
+  background-image: url("images/cltbackground3.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 4rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.glass-box {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 30px;
+  display: inline-block;
+  color: white;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  max-width: 90%;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 3px solid white;
+}
+
+.glass-box p {
+  margin: 0.3rem 0;
+}
+
+.glass-box a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.glass-box a:hover {
+  color: #006A4E;
+  text-shadow: 0 0 5px #006A4E;
+  text-decoration: underline;
+}
 	</style>
 </head>
 
 <body class="is-preload">
 	<!-- Header -->
 	<header id="header">
-		<div class="inner">
+		<div class="glass-box">
 			<a href="#" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
 			<h1><strong>Tevin Parathattal</strong></h1>
 			<h2>Undergraduate Student at UNC Charlotte</h2>
@@ -37,20 +83,20 @@
 			<header class="major">
 				<h2>Welcome to my website. Thank you for visiting!</h2>
 			</header>
-			<p>I'm currently an undergradute student at UNC Charlotte and I work as a Financial Wellness Coach for
-				Niner Finances and a Teaching Assistant for ITSC-2181, which focuses on topics like computer
-				architecture. I hope to work in fintech, machine learning, or quantitative finance in the future. I love
+			<p>I'm currently an undergradute student at UNC Charlotte studying CS, Math, and Finance. I work as a Credit Analyst Intern at Continental Tire and as an intern for the Charlotte's Center for Entrepreneurship and Innovation. Previously, I was a Financial Wellness Coach at Niner Finances and an Instructional Assistant for the College of Computing and Informatics for ITSC-2181, focusing on computer architecture.   I hope to work in fintech, machine learning, or quantitative finance in the future. I love
 				to work out, read, and play sports. Check out some stuff I've accomplished below!</p>
 		
 		</section>
 		<!-- Two -->
 		<section id="two">
 			<h2>Projects</h2>
-			<p>Below are some projects I've worked on during work experiences and personal projects.</p>
-			<div class="row">
+			<p>Below are some projects I've worked on over the past few years.</p>
+			<div class="project-grid">
+				<div class = "work-item">
+					<div class = "row">
 				<article class="col-6 col-12-xsmall work-item">
 					<a href="https://uncc.instructure.com/courses/138065" target="_blank" rel="noopener noreferrer">
-						<img src="images/thumbs/01.jpg" alt="Niner Finances Educational Canvas Modules"
+						<img src="images/NFGroupPhoto.jpeg" alt="Niner Finances Educational Canvas Modules"
 							class="image fit thumb" />
 					</a>
 					<h3>Niner Finances Educational Canvas Modules</h3>
@@ -58,15 +104,15 @@
 						clicking the image above!</p>
 				</article>
 				<article class="col-6 col-12-xsmall work-item">
-					<a href="https://github.com/tevinp23/Landingpage" target="_blank" rel="noopener noreferrer">
-						<img src="images/thumbs/02.jpg" alt="Personal Website" class="image fit thumb" />
+					<a href="http://bit.ly/FinancialWellnessCollective" target="_blank" rel="noopener noreferrer">
+						<img src="images/FWC.jpg" alt = "Project 1"class="image fit thumb" />
 					</a>
-					<h3>Personal Website</h3>
-					<p>Click above to see the github repo.</p>
+					<h3>The Financial Wellness Collective</h3>
+					<p>Click above to see the website.</p>
 				</article>
 			</article>
 			<article class="col-6 col-12-xsmall work-item">
-				<a href="images/ParathattalTevinProject1.pdf" target="_blank" rel="noopener noreferrer">
+				<a href="pdfs/ParathattalTevinProject1.pdf" target="_blank" rel="noopener noreferrer">
 					<img src="images/exam.jpg" alt = "Project 1"class="image fit thumb" />
 				</a>
 				<h3>The Impact of Family on Student Success</h3>
@@ -74,21 +120,21 @@
 			</article>
 			<article class="col-6 col-12-xsmall work-item">
 				<a href="images/Bank Customer Churn.pdf" target="_blank" rel="noopener noreferrer">
-					<img src="images/thumbs/05.jpg" alt = "Project 2"class="image fit thumb" />
+					<img src="images/Churn.png" alt = "Project 2"class="image fit thumb" />
 				</a>
 				<h3>Bank Customer Churn and the Factors Affecting It</h3>
 				<p>Click above to see the pdf.</p>
 			</article>
 			<article class="col-6 col-12-xsmall work-item">
 				<a href="images/PredictingHousingPrices.pdf" target="_blank" rel="noopener noreferrer">
-					<img src="images/thumbs/04.jpg" alt = "Project 3"class="image fit thumb" />
+					<img src="images/HousingPrices.jpg" alt = "Project 3"class="image fit thumb" />
 				</a>
 				<h3>Predicting Housing Prices Using Regression Models</h3>
 				<p>Click above to see the pdf.</p>
 			</article>
 			<article class="col-6 col-12-xsmall work-item">
 				<a href="images/Clustering Startups.pdf" target="_blank" rel="noopener noreferrer">
-					<img src="images/thumbs/03.jpg" alt = "Project 4"class="image fit thumb" />
+					<img src="images/Startups_746x419.jpg" alt = "Project 4"class="image fit thumb" />
 				</a>
 				<h3>Clustering Startups Using Crunchbase data on Kaggle</h3>
 				<p>Click above to see the pdf.</p>
@@ -168,12 +214,10 @@
 
 	<!-- Footer -->
 	<footer id="footer">
-		<div class="inner">
+		<div class="">
 			<ul class="icons">
-				<li><a href="https://github.com/tevinp23" target="_blank" rel="noopener noreferrer"
-						class="icon brands fa-github"><span class="label">Github</span></a></li>
-				<li><a href="https://www.linkedin.com/in/tevinpara" target="_blank" rel="noopener noreferrer"
-						class="icon brands fa-linkedin-in"><span class="label">Linkedin</span></a></li>
+				<li><a href="https://github.com/tevinp23" target="_blank" rel="noopener noreferrer" class="icon brands fa-github"><span class="label">Github</span></a></li>
+				<li><a href="https://www.linkedin.com/in/tevinpara" target="_blank" rel="noopener noreferrer" class="icon brands fa-linkedin-in"><span class="label">Linkedin</span></a></li>
 				<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
 			</ul>
 		</div>
