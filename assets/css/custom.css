@@ -1,0 +1,247 @@
+/* Custom styles for personal website */
+
+/* Header with background image and glass effect */
+#header {
+  background-image: url("../../images/cltbackground3.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 4rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Glass morphism effect for header content */
+.glass-box {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 30px;
+  display: inline-block;
+  color: white;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  max-width: 90%;
+}
+
+/* Profile picture styling */
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 3px solid white;
+}
+
+/* Glass box text styling */
+.glass-box p {
+  margin: 0.3rem 0;
+}
+
+/* Glass box link styling */
+.glass-box a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.glass-box a:hover {
+  color: #006A4E;
+  text-shadow: 0 0 5px #006A4E;
+  text-decoration: underline;
+}
+
+/* Tab Navigation Styles */
+.tab-navigation {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 15px;
+  margin: 2rem auto;
+  padding: 1rem;
+  max-width: 1000px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 2rem;
+  z-index: 100;
+}
+
+.tab-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+  flex-wrap: wrap;
+}
+
+.tab-button {
+  background: transparent;
+  border: 2px solid #e0e0e0;
+  padding: 0.6rem 1rem;
+  border-radius: 20px;
+  color: #333;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.8rem;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  min-width: 80px;
+  flex: 1;
+  max-width: 130px;
+}
+
+.tab-button:hover {
+  background: #f0f0f0;
+  border-color: #006A4E;
+  color: #006A4E;
+  transform: translateY(-2px);
+}
+
+.tab-button.active {
+  background: #006A4E;
+  border-color: #006A4E;
+  color: white;
+  box-shadow: 0 4px 15px rgba(0, 106, 78, 0.3);
+}
+
+/* Tab Content Styles */
+.tab-content {
+  display: none;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile Responsive Styles */
+@media screen and (max-width: 980px) {
+  .tab-navigation {
+    margin: 1rem;
+    padding: 0.75rem;
+    position: relative;
+    top: 0;
+  }
+  
+  .tab-nav {
+    gap: 0.2rem;
+  }
+  
+  .tab-button {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.75rem;
+    min-width: 70px;
+    max-width: 90px;
+  }
+}
+
+@media screen and (max-width: 736px) {
+  .tab-navigation {
+    margin: 1rem 0.5rem;
+    padding: 0.5rem;
+  }
+  
+  .tab-nav {
+    gap: 0.15rem;
+  }
+  
+  .tab-button {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.7rem;
+    min-width: 60px;
+    max-width: 80px;
+    border-radius: 15px;
+  }
+  
+  #header {
+    padding: 2rem 1rem;
+  }
+  
+  .glass-box {
+    padding: 20px;
+    max-width: 95%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .tab-nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.25rem;
+    width: 100%;
+  }
+  
+  .tab-button {
+    width: 100%;
+    max-width: none;
+    padding: 0.5rem 0.25rem;
+    font-size: 0.65rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .tab-nav {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .tab-button {
+    padding: 0.6rem 0.3rem;
+    font-size: 0.7rem;
+  }
+}
+
+/* Experience Timeline Styles */
+.experience-timeline {
+  margin: 2rem 0;
+}
+
+.experience-item {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #006A4E;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.experience-item h3 {
+  color: #006A4E;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.experience-item h4 {
+  color: #666;
+  margin-bottom: 0.5rem;
+  font-style: italic;
+}
+
+.experience-date {
+  color: #888;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.experience-item p:last-child {
+  margin-bottom: 0;
+  line-height: 1.6;
+}

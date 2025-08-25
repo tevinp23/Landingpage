@@ -1,184 +1,252 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 
 <head>
-	<title>Tevin Parathattal</title>
-	<meta charset="utf-9" />
-	<meta name="viewport" content="width=device-width, initial-scale=2, user-scalable=yes" />
+			
+			
+			
+	
+	<title>Tevin Parathattal - CS, Math, & Finance Student</title>
+	
+	<!-- Stylesheets -->
 	<link rel="stylesheet" href="assets/css/main.css" />
-	<style>
-	#header {
-  background-image: url("images/cltbackground3.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding: 4rem 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.glass-box {
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-radius: 20px;
-  padding: 30px;
-  display: inline-block;
-  color: white;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  max-width: 90%;
-}
-
-.profile-pic {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 1rem;
-  border: 3px solid white;
-}
-
-.glass-box p {
-  margin: 0.3rem 0;
-}
-
-.glass-box a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.2s;
-}
-
-.glass-box a:hover {
-  color: #006A4E;
-  text-shadow: 0 0 5px #006A4E;
-  text-decoration: underline;
-}
-	</style>
+	<link rel="stylesheet" href="assets/css/custom.css" />
 </head>
 
 <body class="is-preload">
 	<!-- Header -->
 	<header id="header">
 		<div class="glass-box">
-			<a href="#" class="image avatar"><img src="images/avat1.jpeg" alt="" /></a>
+			<a href="#" class="image avatar" aria-label="Profile picture">
+				<img src="images/avat1.jpeg" alt="Tevin Parathattal" />
+			</a>
 			<h1><strong>Tevin Parathattal</strong></h1>
 			<h2>CS, Math, and Finance</h2>
-			<h2>Undergraduate @ UNC Charlotte </h2>
-			<h3> May 2027</h3>
+			<h2>Undergraduate @ UNC Charlotte</h2>
+			<h3>May 2027</h3>
 			<br />
-			<h2>
-				<a href="https://github.com/tevinp23" target="_blank">GitHub</a> |
-				<a href="https://www.linkedin.com/in/tevinpara/" target="_blank">LinkedIn</a>
-			</h2>
+			<nav class="social-links" aria-label="Social media links">
+				<h2>
+					<a href="https://github.com/tevinp23" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">GitHub</a> |
+					<a href="https://www.linkedin.com/in/tevinpara/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">LinkedIn</a>
+				</h2>
+			</nav>
 			<br />
 		</div>
 	</header>
 
+	<!-- Tab Navigation -->
+	<nav class="tab-navigation" aria-label="Main navigation">
+		<div class="tab-nav">
+			<button class="tab-button" data-tab="about" aria-label="About me tab">
+				About
+			</button>
+			<button class="tab-button" data-tab="smif" aria-label="Student Managed Investment Fund tab">
+				SMIF
+			</button>
+			<button class="tab-button" data-tab="niner-finances" aria-label="Niner Finances tab">
+				Niner Finances
+			</button>
+			<button class="tab-button" data-tab="co-lab" aria-label="CO-LAB tab">
+				CO-LAB
+			</button>
+			<button class="tab-button" data-tab="classroom-projects" aria-label="UNC Charlotte Classroom Projects tab">
+				Classroom
+			</button>
+			<button class="tab-button" data-tab="continental" aria-label="Continental AG tab">
+				Continental
+			</button>
+			<button class="tab-button" data-tab="contact" aria-label="Contact tab">
+				Contact
+			</button>
+		</div>
+	</nav>
+
 	<!-- Main -->
 	<div id="main">
-		<!-- One -->
-		<section id="one">
+		<!-- About Tab Content -->
+		<div id="about" class="tab-content">
+			<section id="one">
 			<header class="major">
 				<h2>Welcome to my website. Thank you for visiting!</h2>
 			</header>
-			<p>Welcome to my website. I’m a junior at UNC Charlotte triple-majoring in Computer Science, Mathematics, and Finance. I serve as a Credit Analyst Intern at Continental Tire and as an Intern with CO-LAB, 
+			<p>Welcome to my website. I’m a junior at UNC Charlotte majoring in Computer Science, Mathematics, and Finance. I serve as a Credit Analyst Intern at Continental Tire and as an Intern with CO-LAB, 
 				UNC Charlotte’s startup coworking space under the Center for Entrepreneurship and Innovation. Previously, I worked as a Financial Wellness Coach with Niner Finances, 
 				where I developed and delivered engaging financial wellness workshops and earned an Award for Dedication and Leadership in Financial Wellness, and as an Instructional Assistant for ITSC-2181, 
 				focusing on computer architecture. I’m passionate about fintech, machine learning, and quantitative finance. Outside of work and study, I enjoy going to the gym, reading, hanging out with friends, 
 				and playing sports. 
 				Feel free to explore my projects and experience below.
+			</p>
+			<!-- Professional Experience Section -->
+			<section>
+				<h2>Professional Experience</h2>
+				<div class="experience-timeline">
+					<div class="experience-item">
+						<h3>Quantitative/Risk Analyst</h3>
+						<h4>Student Managed Investment Fund - UNC Charlotte Belk College of Business</h4>
+						<p class="experience-date">Current</p>
+						<p>Conducted quantitative analysis and risk assessment for investment portfolios.</p>
+					</div>
+					<div class="experience-item">
+						<h3>Credit Analyst Intern</h3>
+						<h4>Continental AG - Tires Group</h4>
+						<p class="experience-date">Current</p>
+						<p>Analyze credit risk and financial data to support business decisions.</p>
+					</div>
+					
+					<div class="experience-item">
+						<h3>Strategy Analyst Intern</h3>
+						<h4>CO-LAB, UNC Charlotte</h4>
+						<p class="experience-date">Current</p>
+						<p>Supporting startup initiatives under the Center for Entrepreneurship and Innovation.</p>
+					</div>
+					
+					<div class="experience-item">
+						<h3>Financial Wellness Coach</h3>
+						<h4>Niner Finances</h4>
+						<p class="experience-date">Previous Role</p>
+						<p>Developed and delivered engaging financial wellness workshops. Earned an Award for Dedication and Leadership in Financial Wellness.</p>
+					</div>
+					
+					<div class="experience-item">
+						<h3>Instructional Assistant</h3>
+						<h4>ITSC-2181, UNC Charlotte College of Computing and Informatics</h4>
+						<p class="experience-date">Previous Role</p>
+						<p>Focused on computer architecture instruction and student support through office hours and grading.</p>
+					</div>
+				</div>
+			</section>
 		</section>
-		<!-- Two -->
-		<section id="two">
-			<h2>Projects</h2>
-			<p>Below are some projects I've worked on over the past few years.</p>
-			<div class="project-grid">
-				<div class = "work-item">
-					<div class = "row">
-				<article class="col-6 col-12-xsmall work-item">
-					<a href="https://uncc.instructure.com/courses/138065" target="_blank" rel="noopener noreferrer">
-						<img src="images/NFGroupPhoto.jpeg" alt="Niner Finances Educational Canvas Modules"
-							class="image fit thumb" />
-					</a>
-					<h3>Niner Finances Educational Canvas Modules</h3>
-					<p>I created and reviewed educational canvas modules for Niner Finances. Check some of them by
-						clicking the image above!</p>
-				</article>
-				<article class="col-6 col-12-xsmall work-item">
-					<a href="http://bit.ly/FinancialWellnessCollective" target="_blank" rel="noopener noreferrer">
-						<img src="images/FWC.jpg" alt = "Project 1"class="image fit thumb" />
-					</a>
-					<h3>The Financial Wellness Collective</h3>
-					<p>Click above to see the website.</p>
-				</article>
-			</article>
-			<article class="col-6 col-12-xsmall work-item">
-				<a href="docs/ParathattalTevinProject1.pdf" target="_blank" rel="noopener noreferrer">
-					<img src="images/exam.jpg" alt = "Project 1"class="image fit thumb" />
-				</a>
-				<h3>The Impact of Family on Student Success</h3>
-				<p>Click above to see the pdf.</p>
-			</article>
-			<article class="col-6 col-12-xsmall work-item">
-				<a href="docs/BankCustomerChurn.pdf" target="_blank" rel="noopener noreferrer">
-					<img src="images/Churn.png" alt = "Project 2"class="image fit thumb" />
-				</a>
-				<h3>Bank Customer Churn and the Factors Affecting It</h3>
-				<p>Click above to see the pdf.</p>
-			</article>
-			<article class="col-6 col-12-xsmall work-item">
-				<a href="docs/PredictingHousingPrices.pdf" target="_blank" rel="noopener noreferrer">
-					<img src="images/HousingPrices.jpg" alt = "Project 3"class="image fit thumb" />
-				</a>
-				<h3>Predicting Housing Prices Using Regression Models</h3>
-				<p>Click above to see the pdf.</p>
-			</article>
-			<article class="col-6 col-12-xsmall work-item">
-				<a href="docs/Clustering Startups-3.pdf" target="_blank" rel="noopener noreferrer">
-					<img src="images/Startups_746x419.jpg" alt = "Project 4"class="image fit thumb" />
-				</a>
-				<h3>Clustering Startups Using Crunchbase data on Kaggle</h3>
-				<p>Click above to see the pdf.</p>
-			</article>
-			<article class="col-6 col-12-xsmall work-item">
-				<a href="docs/Behavioral Segmentation and Predictive Modeling of Credit Card Users-6.pdf" target="_blank" rel="noopener noreferrer">
-					<img src="images/creditcard.jpeg" alt = "Project 4"class="image fit thumb" />
-				</a>
-				<h3>Behavioral Segmentation and Predictive Modeling of Credit Card
-					Users</h3>
-				<p>Click above to see the pdf.</p>
-			</article>
-			
-			
-			
-			
-				
-			</div>
+		</div>
 
-			
-		</section>
+		<!-- Student Managed Investment Fund Tab -->
+		<div id="smif" class="tab-content">
+			<section>
+				<h2>Student Managed Investment Fund</h2>
+				<p>Projects and initiatives related to the Student Managed Investment Fund.</p>
+				<div class="row">
+					<!-- Add SMIF projects here when available -->
+					<div class="col-12">
+						<p><em>Content for Student Managed Investment Fund projects will be added here.</em></p>
+					</div>
+				</div>
+			</section>
+		</div>
 
-		<!-- Three -->
-		<section id="three">
+		<!-- Niner Finances Tab -->
+		<div id="niner-finances" class="tab-content">
+			<section>
+				<h2>Niner Finances Projects</h2>
+				<p>Educational and outreach projects developed during my time with Niner Finances.</p>
+				<div class="row">
+					<article class="col-6 col-12-xsmall work-item">
+						<a href="https://uncc.instructure.com/courses/138065" target="_blank" rel="noopener noreferrer" aria-label="Niner Finances Educational Canvas Modules">
+							<img src="images/NFGroupPhoto.jpeg" alt="Niner Finances Educational Canvas Modules" class="image fit thumb" />
+						</a>
+						<h3>Niner Finances Educational Canvas Modules</h3>
+						<p>I created and reviewed educational canvas modules for Niner Finances. Check some of them by clicking the image above!</p>
+					</article>
+					
+					<article class="col-6 col-12-xsmall work-item">
+						<a href="http://bit.ly/FinancialWellnessCollective" target="_blank" rel="noopener noreferrer" aria-label="The Financial Wellness Collective">
+							<img src="images/FWC.jpg" alt="The Financial Wellness Collective" class="image fit thumb" />
+						</a>
+						<h3>The Financial Wellness Collective</h3>
+						<p>Click above to see the website.</p>
+					</article>
+				</div>
+			</section>
+		</div>
+
+		<!-- CO-LAB Tab -->
+		<div id="co-lab" class="tab-content">
+			<section>
+				<h2>CO-LAB Projects</h2>
+				<p>Startup and entrepreneurship projects from my work with CO-LAB.</p>
+			</section>
+		</div>
+
+		<!-- UNC Charlotte Classroom Projects Tab -->
+		<div id="classroom-projects" class="tab-content">
+			<section>
+				<h2>UNC Charlotte Classroom Projects</h2>
+				<p>Academic projects completed during my studies at UNC Charlotte.</p>
+				<div class="row">
+					<article class="col-6 col-12-xsmall work-item">
+						<a href="docs/ParathattalTevinProject1.pdf" target="_blank" rel="noopener noreferrer" aria-label="The Impact of Family on Student Success">
+							<img src="images/exam.jpg" alt="The Impact of Family on Student Success" class="image fit thumb" />
+						</a>
+						<h3>The Impact of Family on Student Success</h3>
+						<p>Academic research project analyzing factors affecting student performance. Click above to see the pdf.</p>
+					</article>
+					
+					<article class="col-6 col-12-xsmall work-item">
+						<a href="docs/BankCustomerChurn.pdf" target="_blank" rel="noopener noreferrer" aria-label="Bank Customer Churn Analysis">
+							<img src="images/Churn.png" alt="Bank Customer Churn Analysis" class="image fit thumb" />
+						</a>
+						<h3>Bank Customer Churn and the Factors Affecting It</h3>
+						<p>Data analysis project examining customer retention patterns in banking. Click above to see the pdf.</p>
+					</article>
+					
+					<article class="col-6 col-12-xsmall work-item">
+						<a href="docs/PredictingHousingPrices.pdf" target="_blank" rel="noopener noreferrer" aria-label="Predicting Housing Prices">
+							<img src="images/HousingPrices.jpg" alt="Predicting Housing Prices" class="image fit thumb" />
+						</a>
+						<h3>Predicting Housing Prices Using Regression Models</h3>
+						<p>Machine learning project using regression analysis to predict real estate values. Click above to see the pdf.</p>
+					</article>
+					
+					<article class="col-6 col-12-xsmall work-item">
+						<a href="docs/Behavioral Segmentation and Predictive Modeling of Credit Card Users-6.pdf" target="_blank" rel="noopener noreferrer" aria-label="Credit Card User Behavior Analysis">
+							<img src="images/creditcard.jpeg" alt="Credit Card User Behavior Analysis" class="image fit thumb" />
+						</a>
+						<h3>Behavioral Segmentation and Predictive Modeling of Credit Card Users</h3>
+						<p>Advanced analytics project on credit card customer behavior patterns. Click above to see the pdf.</p>
+					</article>
+					<div class="row">
+					<article class="col-6 col-12-xsmall work-item">
+						<a href="docs/Clustering Startups-3.pdf" target="_blank" rel="noopener noreferrer" aria-label="Clustering Startups">
+							<img src="images/Startups_746x419.jpg" alt="Clustering Startups" class="image fit thumb" />
+						</a>
+						<h3>Clustering Startups Using Crunchbase Data</h3>
+						<p>Analysis of startup data from Kaggle using machine learning clustering techniques. Click above to see the pdf.</p>
+					</article>
+				</div>
+				</div>
+			</section>
+		</div>
+
+		<!-- Continental AG Tab -->
+		<div id="continental" class="tab-content">
+			<section>
+				<h2>Continental AG Projects</h2>
+				<p>Work and projects completed during my internship at Continental Tire.</p>
+				<div class="row">
+					<!-- Add Continental projects here when available -->
+					<div class="col-12">
+						<p><em>Content for Continental AG projects will be added here as they become available for public sharing.</em></p>
+					</div>
+				</div>
+			</section>
+		</div>
+
+		<!-- Contact Tab Content -->
+		<div id="contact" class="tab-content">
+			<section id="three">
 			<h2>Get In Touch</h2>
 			<p>I'd love to hear from you!</p>
 			<div class="row">
 				<div class="col-8 col-12-small">
-					<form id="contact-form" method="POST" action="https://formspree.io/f/xjkbgnwj"
-						onsubmit="return validateForm()">
+					<form id="contact-form" method="POST" action="https://formspree.io/f/xjkbgnwj" onsubmit="return validateForm()">
 						<div class="row gtr-uniform gtr-50">
 							<div class="col-6 col-12-xsmall">
-								<input type="text" name="name" id="name" placeholder="Name" required />
+								<input type="text" name="name" id="name" placeholder="Name" required aria-label="Your name" />
 							</div>
 							<div class="col-6 col-12-xsmall">
-								<input type="email" name="email" id="email" placeholder="Email" required />
+								<input type="email" name="email" id="email" placeholder="Email" required aria-label="Your email address" />
 							</div>
 							<div class="col-12">
-								<textarea name="message" id="message" placeholder="Message" rows="4"
-									required></textarea>
+								<textarea name="message" id="message" placeholder="Message" rows="4" required aria-label="Your message"></textarea>
 							</div>
 							<div class="col-12">
 								<input type="checkbox" id="demo-human" name="is-human" required>
@@ -208,30 +276,30 @@
 				</div>
 			</div>
 		</section>
-	</div>
-
-	<script>
-		function validateForm() {
-			const checkBox = document.getElementById('demo-human');
-			if (!checkBox.checked) {
-				alert('Please confirm that you are a human.');
-				return false; // Prevent form submission
-			}
-			return true; // Allow form submission
-		}
-	</script>
-
-
-	
+		</div>
 	</div>
 
 	<!-- Footer -->
 	<footer id="footer">
-		<div class="">
+		<div class="inner">
 			<ul class="icons">
-				<li><a href="https://github.com/tevinp23" target="_blank" rel="noopener noreferrer" class="icon brands fa-github"><span class="label">Github</span></a></li>
-				<li><a href="https://www.linkedin.com/in/tevinpara" target="_blank" rel="noopener noreferrer" class="icon brands fa-linkedin-in"><span class="label">Linkedin</span></a></li>
-				<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+				<li>
+					<a href="https://github.com/tevinp23" target="_blank" rel="noopener noreferrer" 
+					   class="icon brands fa-github" aria-label="GitHub Profile">
+						<span class="label">Github</span>
+					</a>
+				</li>
+				<li>
+					<a href="https://www.linkedin.com/in/tevinpara" target="_blank" rel="noopener noreferrer" 
+					   class="icon brands fa-linkedin-in" aria-label="LinkedIn Profile">
+						<span class="label">Linkedin</span>
+					</a>
+				</li>
+				<li>
+					<a href="mailto:tevinparathattal@gmail.com" class="icon solid fa-envelope" aria-label="Email">
+						<span class="label">Email</span>
+					</a>
+				</li>
 			</ul>
 		</div>
 	</footer>
@@ -243,9 +311,8 @@
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
-
-
-
+	<script src="assets/js/form-validation.js"></script>
+	<script src="assets/js/tab-navigation.js"></script>
 </body>
 
 </html>
