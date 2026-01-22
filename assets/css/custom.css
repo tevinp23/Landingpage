@@ -1,20 +1,44 @@
-/* Custom styles for personal website */
+/* ===============================
+   Custom styles for personal website
+   Cleaned: no conflicting rules
+   Desktop: fixed sidebar + fixed top tabs
+   Mobile: normal header + sticky tabs
+   =============================== */
 
-/* Header with background image and glass effect */
-#header {
+/* Make widths predictable (prevents fixed sidebar padding from increasing its real width) */
+*, *::before, *::after { box-sizing: border-box; }
+
+/* ---------- Layout variables ---------- */
+:root{
+  --sidebar-w: 420px;
+  --topnav-h: 140px; /* must be >= actual tab nav height on desktop */
+}
+
+/* ---------- Header (sidebar) ---------- */
+#header{
+  box-sizing: border-box;
   background-image: url("../../images/cltbackground3.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
   padding: 4rem 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+
+  /* Desktop sidebar behavior */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: var(--sidebar-w);
+  height: 100vh;
+  z-index: 1000;
 }
 
 /* Glass morphism effect for header content */
-.glass-box {
+.glass-box{
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -26,8 +50,8 @@
   max-width: 90%;
 }
 
-/* Profile picture styling */
-.profile-pic {
+/* If you ever use a class-based profile image */
+.profile-pic{
   width: 150px;
   height: 150px;
   object-fit: cover;
@@ -37,40 +61,59 @@
 }
 
 /* Glass box text styling */
-.glass-box p {
+.glass-box p{
   margin: 0.3rem 0;
 }
 
 /* Glass box link styling */
-.glass-box a {
+.glass-box a{
   color: white;
   text-decoration: none;
   font-weight: bold;
   transition: 0.2s;
 }
 
-.glass-box a:hover {
+.glass-box a:hover{
   color: #006A4E;
   text-shadow: 0 0 5px #006A4E;
   text-decoration: underline;
 }
 
-/* Tab Navigation Styles */
-.tab-navigation {
+/* ---------- Main content offset (desktop) ---------- */
+#main{
+  margin-left: var(--sidebar-w);
+  width: calc(100% - var(--sidebar-w));
+  max-width: none;
+  padding: calc(var(--topnav-h) + 2rem) 3rem 3rem 3rem; /* prevents fixed tabs from covering content */
+}
+
+/* Footer offset to match main (desktop) */
+#footer{
+  margin-left: var(--sidebar-w);
+}
+
+/* ---------- Tab Navigation ---------- */
+.tab-navigation{
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border-radius: 15px;
-  margin: 2rem auto;
+
+  /* Fixed top bar on desktop */
+  position: fixed;
+  top: 0;
+  left: var(--sidebar-w);
+  right: 0;
+  z-index: 1100;
+
+  /* Visual styling */
+  border-radius: 0 0 15px 15px;
+  margin: 0;
   padding: 1rem;
-  max-width: 1000px;
+  max-width: none;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  position: sticky;
-  top: 2rem;
-  z-index: 100;
 }
 
-.tab-nav {
+.tab-nav{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -78,7 +121,7 @@
   flex-wrap: wrap;
 }
 
-.tab-button {
+.tab-button{
   background: transparent;
   border: 2px solid #e0e0e0;
   padding: 0.6rem 1rem;
@@ -91,122 +134,61 @@
   text-decoration: none;
   display: inline-block;
   text-align: center;
+
   min-width: 80px;
   flex: 1;
   max-width: 130px;
 }
 
-.tab-button:hover {
+.tab-button:hover{
   background: #f0f0f0;
   border-color: #006A4E;
   color: #006A4E;
   transform: translateY(-2px);
 }
 
-.tab-button.active {
+.tab-button.active{
   background: #006A4E;
   border-color: #006A4E;
   color: white;
   box-shadow: 0 4px 15px rgba(0, 106, 78, 0.3);
 }
 
-/* Tab Content Styles */
-.tab-content {
+/* ---------- Tab content ---------- */
+.tab-content{
   display: none;
   animation: fadeIn 0.3s ease-in-out;
+  padding-top: 1.5rem; /* keeps content from feeling glued to the tabs */
 }
 
-.tab-content.active {
+.tab-content.active{
   display: block;
 }
 
-@keyframes fadeIn {
+@keyframes fadeIn{
   from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
-/* Mobile Responsive Styles */
-@media screen and (max-width: 980px) {
-  .tab-navigation {
-    margin: 1rem;
-    padding: 0.75rem;
-    position: relative;
-    top: 0;
-  }
-  
-  .tab-nav {
-    gap: 0.2rem;
-  }
-  
-  .tab-button {
-    padding: 0.5rem 0.75rem;
-    font-size: 0.75rem;
-    min-width: 70px;
-    max-width: 90px;
-  }
+/* ---------- Contact form readability (optional but recommended) ---------- */
+#contact input:not([type="submit"]):not([type="reset"]):not([type="button"]),
+#contact textarea{
+  background: #ffffff;
+  color: #111;
+  border: 1px solid rgba(0,0,0,0.12);
 }
 
-@media screen and (max-width: 736px) {
-  .tab-navigation {
-    margin: 1rem 0.5rem;
-    padding: 0.5rem;
-  }
-  
-  .tab-nav {
-    gap: 0.15rem;
-  }
-  
-  .tab-button {
-    padding: 0.4rem 0.6rem;
-    font-size: 0.7rem;
-    min-width: 60px;
-    max-width: 80px;
-    border-radius: 15px;
-  }
-  
-  #header {
-    padding: 2rem 1rem;
-  }
-  
-  .glass-box {
-    padding: 20px;
-    max-width: 95%;
-  }
+#contact input:not([type="submit"]):not([type="reset"]):not([type="button"])::placeholder,
+#contact textarea::placeholder{
+  color: rgba(0,0,0,0.45);
 }
 
-@media screen and (max-width: 600px) {
-  .tab-nav {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.25rem;
-    width: 100%;
-  }
-  
-  .tab-button {
-    width: 100%;
-    max-width: none;
-    padding: 0.5rem 0.25rem;
-    font-size: 0.65rem;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .tab-nav {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
-  .tab-button {
-    padding: 0.6rem 0.3rem;
-    font-size: 0.7rem;
-  }
-}
-
-/* Experience Timeline Styles */
-.experience-timeline {
+/* ---------- Experience Timeline ---------- */
+.experience-timeline{
   margin: 2rem 0;
 }
 
-.experience-item {
+.experience-item{
   background: rgba(255, 255, 255, 0.95);
   border-radius: 10px;
   padding: 1.5rem;
@@ -216,32 +198,205 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.experience-item:hover {
+.experience-item:hover{
   transform: translateY(-2px);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
-.experience-item h3 {
+.experience-item h3{
   color: #006A4E;
   margin-bottom: 0.5rem;
   font-size: 1.2rem;
   font-weight: 600;
 }
 
-.experience-item h4 {
+.experience-item h4{
   color: #666;
   margin-bottom: 0.5rem;
   font-style: italic;
 }
 
-.experience-date {
+.experience-date{
   color: #888;
   font-size: 0.9rem;
   margin-bottom: 1rem;
   font-weight: 500;
 }
 
-.experience-item p:last-child {
+.experience-item p:last-child{
   margin-bottom: 0;
   line-height: 1.6;
+}
+
+/* ===============================
+   Responsive breakpoints
+   =============================== */
+
+/* Tablet + down: sidebar becomes normal header; tabs become sticky card again */
+@media screen and (max-width: 980px){
+  :root{
+    --topnav-h: 0px; /* not used on mobile */
+  }
+
+  #header{
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 2rem 1rem;
+  }
+
+  #main{
+    margin-left: 0;
+    width: 100%;
+    padding-top: 0;
+  }
+
+  #footer{
+    margin-left: 0;
+  }
+
+  .tab-navigation{
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    margin: 1rem;
+    padding: 0.75rem;
+    max-width: 1000px;
+    border-radius: 15px;
+  }
+
+  .tab-nav{
+    gap: 0.2rem;
+  }
+
+  .tab-button{
+    padding: 0.5rem 0.75rem;
+    font-size: 0.75rem;
+    min-width: 70px;
+    max-width: 90px;
+  }
+
+  .glass-box{
+    padding: 20px;
+    max-width: 95%;
+  }
+}
+
+@media screen and (max-width: 736px){
+  .tab-navigation{
+    margin: 1rem 0.5rem;
+    padding: 0.5rem;
+  }
+
+  .tab-nav{
+    gap: 0.15rem;
+  }
+
+  .tab-button{
+    padding: 0.4rem 0.6rem;
+    font-size: 0.7rem;
+    min-width: 60px;
+    max-width: 80px;
+    border-radius: 15px;
+  }
+}
+
+@media screen and (max-width: 600px){
+  .tab-nav{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.25rem;
+    width: 100%;
+  }
+
+  .tab-button{
+    width: 100%;
+    max-width: none;
+    padding: 0.5rem 0.25rem;
+    font-size: 0.65rem;
+  }
+}
+
+@media screen and (max-width: 480px){
+  .tab-nav{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tab-button{
+    padding: 0.6rem 0.3rem;
+    font-size: 0.7rem;
+  }
+}
+/* ===============================
+   Strata overrides (single source of truth)
+   =============================== */
+
+html body #main{
+  margin-left: var(--sidebar-w);
+  width: calc(100% - var(--sidebar-w));
+  max-width: none;
+  padding: calc(var(--topnav-h) + 2rem) 3rem 3rem 3rem;
+}
+
+html body #header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: var(--sidebar-w);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 1rem;
+  background-image: url("../../images/cltbackground3.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+html body #footer{
+  margin-left: var(--sidebar-w);
+  width: calc(100% - var(--sidebar-w));
+}
+
+html body .tab-navigation{
+  position: fixed;
+  top: 0;
+  left: var(--sidebar-w);
+  right: 0;
+  margin: 0;
+  max-width: none;
+  border-radius: 0 0 15px 15px;
+  z-index: 2000;
+}
+
+@media (max-width: 980px){
+  html body #header{
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 2rem 1rem;
+  }
+
+  html body #main{
+    margin-left: 0;
+    width: 100%;
+    padding: 2rem 1.5rem;
+  }
+
+  html body #footer{
+    margin-left: 0;
+    width: 100%;
+  }
+
+  html body .tab-navigation{
+    position: sticky;
+    left: 0;
+    top: 0;
+    margin: 1rem;
+    border-radius: 15px;
+  }
 }
