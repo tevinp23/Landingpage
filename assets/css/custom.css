@@ -219,6 +219,77 @@ html body #main {
   margin: 0;
 }
 
+.research-category {
+  margin-top: 3rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.research-category > h3 {
+  margin-bottom: 0;
+  color: var(--brand);
+  font-size: 1.45rem;
+}
+
+.research-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.research-item {
+  min-width: 0;
+}
+
+.research-thumbnail {
+  display: grid;
+  width: 100%;
+  min-height: 260px;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  place-items: center;
+  overflow: hidden;
+  background: #edf3f1;
+  border-radius: 10px;
+  box-shadow: 0 3px 14px rgba(0, 0, 0, 0.12);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.research-thumbnail:hover,
+.research-thumbnail:focus-visible {
+  transform: translateY(-3px);
+  box-shadow: 0 7px 20px rgba(0, 0, 0, 0.18);
+}
+
+.research-thumbnail:focus-visible {
+  outline: 3px solid rgba(0, 106, 78, 0.3);
+  outline-offset: 3px;
+}
+
+.research-thumbnail img {
+  display: block;
+  width: 100%;
+  height: 260px;
+  object-fit: contain;
+}
+
+.research-item h3 {
+  margin-bottom: 0.65rem;
+  color: #333;
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+
+.research-advisor {
+  margin-bottom: 0.75rem;
+  color: #666;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
 @keyframes fade-in {
   from {
     opacity: 0;
@@ -265,6 +336,75 @@ html body #main {
 
 .experience-item p:last-child {
   margin-bottom: 0;
+}
+
+.awards-section {
+  margin-top: 3rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.awards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.award-item {
+  padding: 1.5rem;
+  background: #fff;
+  border-top: 4px solid var(--brand);
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.award-item-wide {
+  grid-column: 1 / -1;
+}
+
+.award-item h3 {
+  margin: 0 0 0.65rem;
+  color: #333;
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+
+.award-item p:last-child {
+  margin-bottom: 0;
+}
+
+.award-label {
+  margin: 0 0 0.45rem;
+  color: var(--brand);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.award-issuer {
+  margin-bottom: 0.75rem;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.award-semesters {
+  display: flex;
+  margin: 1rem 0 0;
+  padding: 0;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.award-semesters li {
+  padding: 0.35rem 0.7rem;
+  color: var(--brand);
+  font-size: 0.85rem;
+  font-weight: 600;
+  background: #eef7f4;
+  border-radius: 999px;
 }
 
 #contact input:not([type='submit']):not([type='reset']):not([type='button']),
@@ -349,9 +489,24 @@ html body #footer {
 }
 
 @media screen and (max-width: 736px) {
-  .smif-grid {
+  .smif-grid,
+  .research-grid {
     grid-template-columns: 1fr;
     gap: 1.75rem;
+  }
+
+  .awards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .award-item-wide {
+    grid-column: auto;
+  }
+
+  .research-thumbnail,
+  .research-thumbnail img {
+    min-height: 0;
+    height: 220px;
   }
 }
 
