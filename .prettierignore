@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+
+# Binary assets and documents
+assets/webfonts/
+docs/
+images/
+
+# Minified third-party bundles
+assets/css/fontawesome-all.min.css
+assets/js/*.min.js
+
+# Generated CSS (source: assets/sass/main.scss)
+assets/css/main.css
+
+# Repository metadata and non-code files
+.git/
+LICENSE.txt
+CNAME
